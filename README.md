@@ -47,4 +47,4 @@
 <img src="https://lunova.studio/wp-content/uploads/2025/07/MinecraftLaunch-scaled.png" alt="pARPxN8.png" border="0" />
 ## 开源协议
 
-这个项目在 MIT 许可下分发，具体详情可见 [LICENSE](LICENE.txt) .
+这个项目在 MIT 许可下分发，具体详情可见 [LICENSE](LICENSE.txt) .
