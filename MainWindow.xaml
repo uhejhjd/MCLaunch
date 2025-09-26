@@ -1,0 +1,61 @@
+﻿<pu:WindowX   x:Class="MCLaunch.MainWindow"
+        
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MCLaunch"
+        xmlns:pu="https://opensource.panuon.com/wpf-ui"
+        mc:Ignorable="d"
+        Title="FooView" Height="350" Width="500"
+              pu:WindowXCaption.Height="40"
+              pu:WindowXCaption.Buttons="Close">
+    <pu:WindowXCaption.HeaderTemplate>
+        <DataTemplate>
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="10,0,0,0" Source="/Samples;component/Resources/Logo.png"
+                       RenderOptions.BitmapScalingMode="HighQuality"
+                       Height="25"/>
+            </StackPanel>
+        </DataTemplate>
+    </pu:WindowXCaption.HeaderTemplate>
+    <pu:WindowXCaption.ExtendControl>
+        <StackPanel Orientation="Horizontal">
+            <Button Width="40"
+                    Height="35"
+                    FontSize="18"
+                    Background="Transparent"
+                    pu:ButtonHelper.HoverBackground="#CCCCCC"
+                    pu:ButtonHelper.HoverForeground="#FFFFFF"
+                    VerticalAlignment="Top"
+                    FontFamily="{StaticResource PanuonIconFont}"
+                    Content="&#xe98f;"/>
+            <pu:DropDown Width="40"
+                          Height="35"
+                          VerticalAlignment="Top"
+                         pu:ShadowHelper.BlurRadius="10"
+                         pu:ShadowHelper.ShadowDepth="3"
+                         pu:DropDownHelper.Placement="BottomLeft"
+                         pu:DropDownHelper.CornerRadius="5,1,5,5"
+                         pu:DropDownHelper.ClipDockSideShadow="False"
+                         StaysOpen="False">
+                <pu:DropDown.Content>
+                    <ToggleButton Background="Transparent"
+                    pu:ToggleButtonHelper.HoverBackground="#CCCCCC"
+                    pu:ToggleButtonHelper.HoverForeground="#FFFFFF"
+                    pu:ToggleButtonHelper.CheckedBackground="#CCCCCC"
+                    pu:ToggleButtonHelper.CheckedForeground="#FFFFFF"
+                    IsChecked="{Binding IsOpen, RelativeSource={RelativeSource AncestorType=pu:DropDown}}"
+                    Content="&#xe939;"
+                    FontSize="18"
+                    FontFamily="{StaticResource PanuonIconFont}"/>
+                </pu:DropDown.Content>
+                <StackPanel Height="150"
+                            Width="120">
+                </StackPanel>
+            </pu:DropDown>
+        </StackPanel>
+    </pu:WindowXCaption.ExtendControl>
+    <Grid>
+    </Grid>
+</pu:WindowX>
