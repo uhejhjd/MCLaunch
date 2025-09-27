@@ -10,6 +10,7 @@
         Title="FooView" Height="350" Width="500"
               pu:WindowXCaption.Height="40"
               pu:WindowXCaption.Buttons="Close">
+
     <pu:WindowXCaption.HeaderTemplate>
         <DataTemplate>
             <StackPanel Orientation="Horizontal">
@@ -56,6 +57,66 @@
             </pu:DropDown>
         </StackPanel>
     </pu:WindowXCaption.ExtendControl>
+
     <Grid>
+        <ComboBox
+            Width="150"
+            Height="35"
+            Padding="10,0"
+            pu:ComboBoxHelper.ClearButtonVisibility="VisibleOnHover"
+            pu:ComboBoxHelper.CornerRadius="4"
+            pu:ComboBoxHelper.ItemsHoverBackground="#2236AAF7"
+            pu:ComboBoxHelper.ItemsSelectedBackground="#36AAF7"
+            pu:ComboBoxHelper.ItemsSelectedForeground="#FFFFFF"
+            pu:ComboBoxHelper.OpenedBorderThickness="0"
+            pu:ComboBoxHelper.OpenedCornerRadius="4,4,0,0"
+            pu:ComboBoxHelper.OpenedForeground="#36AAF7"
+            pu:ComboBoxHelper.OpenedShadowColor="#36AAF7"
+            pu:ComboBoxHelper.Watermark="Select an option"
+            pu:ComboBoxHelper.WatermarkForeground="Gray"
+            pu:DropDownHelper.BorderThickness="0"
+            pu:DropDownHelper.CornerRadius="0,0,4,4"
+            pu:DropDownHelper.ShadowColor="#36AAF7"
+            pu:DropDownHelper.VerticalOffset="-1"
+            pu:ShadowHelper.BlurRadius="15"
+            pu:ShadowHelper.ShadowDepth="5"
+            BorderBrush="LightGray"
+            BorderThickness="1.5" Margin="0,0,33,109" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <ComboBoxItem Content="Item 1" />
+            <ComboBoxItem Content="Item 2" />
+            <ComboBoxItem Content="Item 3" />
+        </ComboBox>
+        <Button Content="Button" Height="40" Width="150"
+            pu:ButtonHelper.CornerRadius="4"
+            Background="#36AAF7" Foreground="#FFFFFF"
+            pu:ButtonHelper.IsPending="True"
+            pu:ButtonHelper.ClickEffect="Shake" Margin="0,0,33,52" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Button_Click">
+            <pu:ButtonHelper.PendingSpinStyle>
+                <Style TargetType="pu:Spin" BasedOn="{StaticResource {x:Static pu:ButtonHelper.PendingSpinStyleKey}}">
+                    <Setter Property="Margin" Value="0,0,10,0" />
+                    <Setter Property="SpinStyle" Value="Ring2" />
+                </Style>
+            </pu:ButtonHelper.PendingSpinStyle>
+
+        </Button>
+        <Slider Width="400" VerticalAlignment="Top"
+        Foreground="DimGray"
+        pu:SliderHelper.IsTextVisible="True" pu:SliderHelper.TextSpacing="0" pu:SliderHelper.TextStringFormat="N1"
+        pu:SliderHelper.TrackThickness="10" 
+        IsSnapToTickEnabled="True" TickFrequency="0.5" Margin="78,99,22,0">
+            <Slider.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#447CCBFC" />
+                    <GradientStop Color="#44FF6BB8" Offset="1" />
+                </LinearGradientBrush>
+            </Slider.Background>
+            <pu:SliderHelper.CoveredBackground>
+                <LinearGradientBrush>
+                    <GradientStop Color="#7CCBFC" />
+                    <GradientStop Color="#FF6BB8" Offset="1" />
+                </LinearGradientBrush>
+            </pu:SliderHelper.CoveredBackground>
+        </Slider>
     </Grid>
+
 </pu:WindowX>

@@ -9,9 +9,11 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <pu:KeyOnlyStyleDictionary Includes="All" />
+                <pu:StyleDictionary Includes="All" />
                 <ResourceDictionary>
-
+                    <pu:GlobalSettings x:Key="globalSettings"
+                                       FontFamily="Arial" 
+                                       FontSize="14"/>
                 </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

@@ -1,7 +1,5 @@
 ﻿# 关于
 此项目基于.NET 8编写，使用WPF作为UI框架(但是还没有实现[doge)，目标是创建一个简单易用的Minecraft启动器。	
-###### 注意
-aaa
 # MinecraftLaunch
 这是一个我的世界玩家自制的启动器。
 欢迎使用！！！  
@@ -30,7 +28,7 @@ aaa
 | 管理 launchprofile.json 的数据                                     | 🟥                  |
 | 查找已安装的 Java 运行时                                           | 🟩                   |
 | 支持第三方下载镜像源 [BMCLAPI](https://bmclapidoc.bangbang93.com/) | 🟩                   |
-| GUI 界面                                                           | 🟥                   |
+| GUI 界面                                                           | 🟩                   |
 ### 与我们联系
 
 需要帮助？
