@@ -20,6 +20,7 @@ using MinecraftLaunch;
 using Panuon.WPF.UI;
 using MinecraftLaunch.Components.Downloader;
 using MinecraftLaunch.Extensions;
+using System.Collections.Generic;
 
 namespace MCLaunch
 {
@@ -383,11 +384,10 @@ namespace MCLaunch
         {
             InitializeComponent();
             Init.AInit();
-            VerticalContentAlignment = VerticalAlignment.Center;
             MinecraftParser minecraftParser = ".\\.minecraft";
 
             //VerCombo.Items.Add(minecraftParser.GetMinecrafts().First());
-            //VerCombo.ItemsSource = minecraftParser.GetMinecrafts();
+            VerCombo.ItemsSource = minecraftParser.GetMinecrafts();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
