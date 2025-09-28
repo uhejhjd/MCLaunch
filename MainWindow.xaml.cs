@@ -23,6 +23,7 @@ using MinecraftLaunch.Extensions;
 
 namespace MCLaunch
 {
+
     public class Launch
     {
         public async void ALaunch()
@@ -257,7 +258,7 @@ namespace MCLaunch
             #region 本地游戏读取
 
             MinecraftParser minecraftParser = ".\\.minecraft";
-
+             minecraftParser.GetMinecrafts();
             minecraftParser.GetMinecrafts().ForEach(x =>
             {
                 Console.WriteLine(x.Id);
@@ -380,10 +381,13 @@ namespace MCLaunch
     {
         public MainWindow()
         {
-            var sw = Stopwatch.StartNew();
             InitializeComponent();
             Init.AInit();
-            
+            VerticalContentAlignment = VerticalAlignment.Center;
+            MinecraftParser minecraftParser = ".\\.minecraft";
+
+            //VerCombo.Items.Add(minecraftParser.GetMinecrafts().First());
+            //VerCombo.ItemsSource = minecraftParser.GetMinecrafts();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
